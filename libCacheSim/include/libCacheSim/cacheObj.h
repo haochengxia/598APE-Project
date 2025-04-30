@@ -156,6 +156,7 @@ typedef struct cache_obj {
   struct cache_obj *hash_next;
   obj_id_t obj_id;
   int64_t obj_size;
+  uint64_t logic_timestamp;
   struct {
     struct cache_obj *prev;
     struct cache_obj *next;

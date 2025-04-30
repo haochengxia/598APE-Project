@@ -9,6 +9,16 @@ extern "C" {
 typedef struct {
   cache_obj_t *q_head;
   cache_obj_t *q_tail;
+  uint64_t* hit_pos;
+  bool has_obj_removed;
+  uint64_t logic_timer;
+
+  // to track the removed objects
+  struct {
+    uint64_t *removed_timestamps;  // dynamic array to track removed timestamps
+    uint64_t n_removed;            // number of removed objects
+    uint64_t capacity;             // capacity of the removed timestamps array
+  } removed_track;
 } FIFO_params_t;
 
 /* used by LFU related */

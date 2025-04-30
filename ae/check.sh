@@ -1,0 +1,1 @@
+valgrind --leak-check=full ./_build/bin/cachesim ./data/1082.oracleGeneral.zst oracleGeneral s3fifo 0.001 --ignore-obj=1
